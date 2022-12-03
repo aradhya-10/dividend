@@ -17,6 +17,8 @@ const Form = () => {
     Duration: 0,
   };
 
+  
+
   const [details, setDetails] = useState(ddetail);
 
   function submitted(e) {
