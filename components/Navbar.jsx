@@ -6,8 +6,8 @@ const Navbar = () => {
 
 return (
 
-    <nav class="px-2 sm:px-4 py-2.5 dark:bg-gray-900">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <nav className="px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+      <div className="container flex flex-wrap items-center justify-between mx-auto">
         <Link href={{ pathname: "/" }}>
           <span className="self-center text-xl font-semibold whitespace-nowrap text-blue-300 tracking-[10px]">DIVIDEND</span>
         </Link>x
