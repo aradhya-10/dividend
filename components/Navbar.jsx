@@ -60,7 +60,9 @@ const Navbar = () => {
             </li>
 
             <li>
+				<div className="bg-purple-500 px-4 py-2 rounded-full">
               <button onClick = {() => socialLogin()} >Connect </button>
+			  </div>
             </li>
           </ul>
         </div>
