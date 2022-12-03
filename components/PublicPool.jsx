@@ -21,7 +21,9 @@ const publicPool = () => {
   })();
   return (
     <div className='flex bg-black'>
-      
+      <div className=''>
+        
+      </div>
     </div>
   )
 }

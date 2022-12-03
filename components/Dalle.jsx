@@ -63,7 +63,7 @@ const Dalle = () => {
         </label>
 
         <button onClick={handleClick} className="text-black p-4 rounded-lg bg-blue-400 hover:text-purple-700 hover:border-gray-300 border
-        ">Generate
+        ">Generate Image
         </button>
         <Link href={{ pathname: '/form' }}>
         <button  className={'text-black p-4 rounded-lg bg-blue-400 hover:text-purple-700 hover:border-gray-300 border ' +(generated ? "":"disabled")} >Submit</button>

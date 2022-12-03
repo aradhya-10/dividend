@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 //Wagmi
 import { useAccount, useConnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 //Internal Imports
 import Dalle from "../components/Dalle";
-import Navbar from "../components/Navbar";
 import ViewNFT from "../components/ViewNFT";
 
 // var Web3 = require("web3");
@@ -20,17 +19,17 @@ import ViewNFT from "../components/ViewNFT";
 
 export default function Home() {
   const Navbar = dynamic(
-    () => import("../components/Navbar").then((res) => res.default),
+    () => import("../components/Navbar").then((res) => res),
     {
       ssr: false,
     }
   );
-
   // init wallet
   const { address, isConnected } = useAccount();
   const { connect } = useConnect({
     connector: new InjectedConnector(),
   });
+  const [imageUrl, setImageUrl] = useState('');
 
   return (
     <div className="bg-black min-h-screen">
@@ -41,11 +40,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Navbar />
-          </Suspense>
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+        </Suspense>
+        <section className="p-4 m-4 flex items-center justify-center">
+          <Dalle imageUrl = {imageUrl} />
+        </section>
       </main>
     </div>
   );
