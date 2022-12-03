@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@biconomy/smart-account": "^0.0.3",
-    "@biconomy/web3-auth": "^0.0.3",
+    "@biconomy/smart-account": "^0.0.4",
+    "@biconomy/web3-auth": "^0.0.4",
     "@rainbow-me/rainbowkit": "^0.8.0",
+    "dotenv": "^16.0.3",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.6",
     "ethers": "^5.7.2",
