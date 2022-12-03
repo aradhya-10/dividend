@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
-	// <Form />
   );
 }
 

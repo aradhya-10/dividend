@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Dalle from "../components/Dalle";
+import Form from "../components/Form";
 import Navbar from "../components/Navbar";
 import ViewNFT from "../components/ViewNFT";
 // import SocialLogin from "@biconomy/web3-auth";
@@ -44,7 +45,9 @@ export default function Home() {
       <section className="relative flex justify-center items-center">
         <ViewNFT />
       </section>
-
+	  <section className="relative flex justify-center items-center">
+        <Form />
+      </section>
         {/* <section className="flex p-5 items-center justify-center">
           <Dalle />
         </section> */}
