@@ -29,16 +29,12 @@ const wagmiClient = createClient({
 // ENS functionality is provided directly on the core provider object.
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="bg-black min-h-screen">
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider
-          chains={chains}
-          theme={darkTheme({ accentColor: "rgb(148,0,211)" })}
-        >
-          <Component {...pageProps} />
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </div>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains} theme={darkTheme({accentColor:"rgb(148,0,211)"})}>
+        <Component {...pageProps} />
+      </RainbowKitProvider>
+    </WagmiConfig>
+	// <Form />
   );
 }
 

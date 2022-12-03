@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 import { Suspense } from "react";
 //Internal Imports
 import Dalle from "../components/Dalle";
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import ViewNFT from "../components/ViewNFT";
 
 // var Web3 = require("web3");
@@ -41,20 +41,11 @@ export default function Home() {
       </Head>
 
       <main>
-      <div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Navbar />
-            </Suspense>
-          </div>
-        {/* <section className="relative flex justify-center items-center">
-        <ViewNFT />
-      </section> */}
-
-        <section className="flex p-5 items-center justify-center">
-          <Dalle />
-        </section>
-
-        <section className=""></section>
+        <div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Navbar />
+          </Suspense>
+        </div>
       </main>
     </div>
   );
